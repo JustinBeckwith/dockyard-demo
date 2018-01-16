@@ -1,0 +1,17 @@
+{
+  "name": "node8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "docker build -f Dockerfile-node8 -t gcr.io/dockyard-demo/node8 . && docker build -f Dockerfile-node8-slim -t gcr.io/dockyard-demo/node8-slim . && docker build -f Dockerfile-node8-alpine -t gcr.io/dockyard-demo/node8-alpine . && docker build -f Dockerfile-node8-stretch -t gcr.io/dockyard-demo/node8-stretch .",
+    "push": "docker push gcr.io/dockyard-demo/node8 && docker push gcr.io/dockyard-demo/node8-slim && docker push gcr.io/dockyard-demo/node8-alpine && docker push gcr.io/dockyard-demo/node8-stretch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
